@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box and Text Shadow</title>
+    <style>
+      .container {
+        display: flex;
+        /* flex-direction: column; */
+      }
+
+      .card {
+        padding: 20px 15px;
+        /* border: 2px solid red; */
+        margin: 22px 18px;
+        background-color: rgba(187, 156, 116, 0.734);
+
+        /* Boxshadow and TextShadow have same property and values */
+
+        /* BOX Shadow */
+        /* USE: If i have same background color and container color then container la shadow deun uchalu shakato */
+
+        /* box-shadow: x y color; x/y values can be positive/negative for khali/varti shadow*/
+
+        /*1./* box-shadow: x y blurRadius spreadRadius color; Outer side shadow  */
+
+        /*2./* box-shadow:inset x y blurRadius spreadRadius color; Inner side shadow (container chya space madhe yenar) */
+
+        /*3./* box-shadow: 3px 2px red, 4px 5px green;  for Multiple shadows*/
+
+        /* box-shadow: 3px 5px green; */
+
+        /* box-shadow: -3px -5px green;  */
+        /* -x -y color;   varchya side la shadow denya sathi*/
+
+        /* box-shadow: 5px 6px 6px aqua; */
+        /* 3rd argument is blur radius ki shadow ko kitana failana hai */
+
+        /* box-shadow: -5px -6px 6px aqua; */
+        /* 3rd argument is blur radius ki shadow ko kitana failana hai. This is for upper ki taraf */
+
+        /* box-shadow: 5px 6px 6px 10px aqua; */
+        /* 4th argument is spread radius ki shadow ko charo aur kitana failana hai */
+
+        /* box-shadow: -5px -6px 6px 10px aqua; */
+        /* 4th argument is spread radius ki shadow ko charo aur kitana failana hai starting from the top */
+
+        /* box-shadow: inset 3px 4px red; */
+
+        /* box-shadow: 3px 2px red, 4px 5px green; 
+        */
+      }
+
+      /* TEXT Shadow */
+      /* USE: text jar backgorund madhe mix zal ahe(happens in background images) tar this is useful */
+
+      /*text-shadow: x y color;  x/y values can ne positive/negative for khali/varti shadow */
+
+      /*1./*text-shadow: x y blurRadius spreadRadius color; Outer side shadow  */
+
+      /*2./*text-shadow: inset x y blurRadius spreadRadius color; Inner side shadow (text chya space madhe yenar) */
+
+      /*3./*text-shadow: 3px 2px red, 4px 5px green;  for Multiple shadows*/
+
+      /* yaha pe bhi hum negative values de sakate hai */
+
+      .card h2 {
+        text-shadow: 2px 3px rgb(175, 61, 61);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="card1">
+        <h2>Card-1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          tempora fugiat alias molestiae veniam quia reprehenderit tenetur.
+        </p>
+      </div>
+      <div class="card" id="card2">
+        <h3>Card-2</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+          minima soluta ullam vel quam provident exercitationem quaerat suscipit
+        </p>
+      </div>
+      <div class="card" id="card3">
+        <h4>Card-3</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At hic qui
+          dolorem consequatur soluta, temporibus iste dolores consequuntur
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

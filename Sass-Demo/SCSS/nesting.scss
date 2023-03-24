@@ -1,0 +1,59 @@
+// Vanila CSS
+// .container {
+//   color: red;
+// }
+// .container div {
+//   color: blue;
+// }
+
+// .container div p {
+//   color: rgb(79, 200, 200);
+// }
+
+// .container div p span {
+//   color: blueviolet;
+// }
+// .container div p span:hover {
+//   background-color: cyan;
+// }
+
+.container {
+  color: red;
+  div {
+    color: blue;
+    div {
+      color: rgb(79, 200, 200);
+      .heading {
+        color: black;
+      }
+      span {
+        color: blueviolet;
+        &:hover {
+          background-color: rgb(13, 14, 14);
+        }
+      }
+    }
+  }
+}
+
+//Sibling Selection
+
+// .second {
+//   + h2 {
+//     color: yellow;
+//   }
+// }
+
+.second {
+  ~ h2 {
+    color: yellow;
+  }
+  & {
+    background-color: brown;
+  }
+  &:hover {
+    background-color: green;
+  }
+}
+
+// & => parent i.e .second = &, i.e  & represents second class but only inside { } of .second . & jyachya { } chya aat aahe to tyala represent karto i.e parent

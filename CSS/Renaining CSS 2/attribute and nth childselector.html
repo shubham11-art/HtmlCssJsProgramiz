@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute and nth Child Peseudo Selectors</title>
+    <style>
+      .container {
+        width: 250px;
+        margin: 25px auto;
+      }
+      input {
+        display: block;
+      }
+
+      input[type="text"] {
+        border: 4px solid rgb(34, 255, 0);
+      }
+
+      a[target] {
+        /* he donhinna(google and facebook) apply hoil karan donhi madhe target ahe */
+        display: block;
+        color: rgb(234, 16, 190);
+        font-size: 20px;
+        font-weight: bold;
+      }
+      a[target="_blank"] {
+        /* he specific ahe so fakt facebook la apply hoil */
+        color: rgb(234, 16, 16);
+        font-size: 20px;
+      }
+
+      /* nth Child Pseudo Selector */
+
+      li:nth-child(3) {
+        /* will apply to 3rd element */
+        color: blueviolet;
+      }
+
+      li:nth-child(2n) {
+        color: aqua;
+      }
+
+      /* li:nth-child(3n + 3) {
+        color: rgb(212, 255, 0);
+      } */
+
+      /* yaat n= 0 to infinity   run karto to ani aalelya value chya element la property apply karto */
+
+      /* 
+      li:nth-child(odd) {
+        color: rgb(51, 255, 0);
+      } */
+
+      /* li:nth-child(even) {
+        color: rgb(208, 0, 255);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="http://google.com" target="_self">Google</a>
+      <a href="http://google.com" target="_blank">Facebook</a>
+      <form action="" class="form_control">
+        <input type="text" placeholder="Enter Name" />
+        <input type="password" placeholder="Enter password" />
+        <input type="submit" value="submit" />
+      </form>
+      <ul>
+        <li class="item" id="item-1">Item1</li>
+        <li class="item" id="item-2">Item2</li>
+        <li class="item" id="item-3">Item3</li>
+        <li class="item" id="item-4">Item4</li>
+        <li class="item" id="item-5">Item5</li>
+        <li class="item" id="item-6">Item6</li>
+        <li class="item" id="item-7">Item7</li>
+        <li class="item" id="item-8">Item8</li>
+        <li class="item" id="item-9">Item9</li>
+        <li class="item" id="item-10">Item10</li>
+      </ul>
+    </div>
+  </body>
+</html>

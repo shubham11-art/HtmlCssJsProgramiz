@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        border: 2px solid red;
+        background-color: antiquewhite;
+        height: 2000px;
+      }
+      .box {
+        display: inline-block;
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      #box3 {
+        /* static: Default value of Normal Flow */
+
+        /* relative: Position the item relative to its 'Normal Position' and will leave a gap(i.e to halla tar tyachi jaga rikami rahil) at its normal position  */
+        /* position: relative; */
+        /* left: 30px; adds 30 pixels to the element's LEFT position SO  position pasun right la janar*/
+        /* top: 20px; adds 20 pixels to the element's TOP position  position pasun bottom la janar*/
+        /* bottom: 20px; adds 20 pixels to the element's BOTTOM position position pasun top la janar*/
+        /* right: 20px; adds 20 pixels to the element's RIGHT position position pasun left la janar  */
+
+        /*absolute: Position the item relative to its 'first Parent(here .container' */
+        /* position: absolute;
+        top: 34px;
+        left: 30px;
+         */
+        /* position: absolute;
+        bottom: 50px; for bottom it works relative to  browser window.
+        left: 30px; */
+
+        /* fixed: Position the item relative to the 'Browser window(means screen size/ browesr webpage distay te)'  */
+        /* position: fixed;
+        right: 10px;
+        bottom: 10px; */
+
+        /* sticky: A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).  
+        
+        Combination of relative(for positioning) and fixted(after scroll get fixed at the top of window) */
+        /* position: sticky; */
+        /* top: 00px; 10px; ONLY works for this ani top pasun dilelya size la yeun fix hoto after scrolling*/
+
+        /* bottom: 20px; */
+        /* left: 10px; */
+        /* right: 10px; */
+        /* yanna may be Horizontal scroll var work hot asel */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
+    </div>
+  </body>
+</html>

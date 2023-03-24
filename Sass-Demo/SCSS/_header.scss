@@ -1,0 +1,22 @@
+@use "constants";
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: constants.$primary-color;
+  justify-content: space-between;
+  padding: 0 50px;
+
+  a {
+    text-decoration: none;
+  }
+
+  // Varachi or Khalachi donhi ok aahe
+
+  //   nav {
+  //     a {
+  //       text-decoration: none;
+  //     }
+  //   }
+}

@@ -1,0 +1,236 @@
+<!-- //***// Video 1- Installation
+ site- sass-lang.com
+ npm i-g sass
+
+ SASS
+ Syntactically Awesome Style Sheet
+ Not a replacement but a new way to write CSS. It is a CSS preprocessor.
+
+ Browser la 3 ch gosti kaltat- HTML, CSS, JS
+
+ Added Advantages Over CSS
+ Declaring variables
+ Nesting
+ Mixin, Modules, Partials
+ Inheritance Operators etc
+
+ WHY to Use
+ Kami lines madhe style hote
+ Easily managable // typescript pan tya sathich use kartat.
+ Extra features aahet.
+
+SASS sathi 2 extentions miltat .sass and .scss(preferable)
+
+ Conversion
+ SASS hi CSS madhe convert karavi lagate. We can convert file, folder to css.
+ We have sass compiler to do this
+ SYNTAX
+ sass scss:css --watch  // scss folder will be converted to css folder along with all files inside.
+ --watch => ki continous sathi aahe te, i.e jar udya folder madhe kahi changes zale tar te automatically convert kele jaatil
+ EX abc.scss ==> abc.css -->
+
+<!-- There ar Two Syntaxes of SASS
+
+        1. Indentation (extention .sass)
+
+        .container 
+            width : 200px;
+            height : 150px;
+            background-color:blue;
+        span
+            color:red;
+            padding: 2px;
+
+        2. Regular CSS {} (extention .scss)
+
+        .container {
+            width : 200px;
+            height : 150px;
+            background-color:blue;
+            }
+
+        span{
+            color:red;
+            padding: 2px;}  -->
+
+<!-- style.scss hi file SCSS Folder madhech banvayachi. index.html hi baher banvayachi.  -->
+
+<!-- Run the Command in SASS-DEMO Folder for conversion
+    sass inputFolder:outputFolder --watch
+    sass scss:css --watch -->
+
+<!-- Conversion nantar ji .map file banate in css folder tyat compilation/conversion chya detalits astat -->
+
+<!-- STEPS to Follow
+     1. Create .scss file in SCSS Folder
+     2. Convert to CSS through commond run
+     3. Link the convert CSS file into HTML file-->
+
+<!--********  Video 2  ******* -->
+
+<!--  Variables  -->
+
+<!-- Variables are used to store the values which can be reused and changed over the time  -->
+
+<!-- How To Use Variable
+     $variableName : value; -->
+
+<!-- Nesting -->
+
+<!-- .container {
+  color: red;
+  div {
+    color: blue;
+    p {
+      color: rgb(79, 200, 200);
+      span {
+        color: blueviolet;
+        &:hover {
+          background-color: cyan;
+        }
+      }
+    }
+  }
+} -->
+
+<!-- container chya opening bracket madhe div, div chya opening bracket madhe p, p chya opening bracket madhe span etc -->
+
+<!-- span chya opening bracket madhe hover,  but span ha tyacha parent aslyamule &:hover vaprayach 
+
+Where & ==> & jyachya { } madhe aahe tyala represent karto. & also means parent -->
+
+<!-- Advantages
+Easy to Maintain, Readable, Kami Lines cha -->
+
+<!-- NOTE
+    Mazi jashi html file aahe i.e kashya under kay nested aahe tasach same nesting style kartana karayachi EX div chya aat p, span hot so styling chya veli pan div chya { } madhech te aahet ani sagale container chya aat aahet-->
+
+<!-- 1:28:00 -->
+<!-- Partials -->
+
+<!--Purn Html code chi ekach styling file banavane not conveinient karan khup bulky houn jail, hard maintain and edit. So vegveglya veglya files banvayachya for each html section like header, section,services, contact etc 
+These seperate files are known as Partials-->
+<!-- Nantar ya saglya files Compile karun ekach common file banvayache, hichi link html var ghyayachi ani webPage var load karayachi. -->
+
+<!-- Create Partial File
+      _name.scss
+    Ex _header.scss, _contact.scss  -->
+
+<!-- Import Partials 
+        @use "header";  @use "contact"; etc  -->
+
+<!-- Jya file madhe saglya import kelya aahet tyala compile karayach common file madhe -->
+
+<!-- Aapan variables cha Partial banavun pahije tikade import karun vapru shakato   -->
+
+<!--*****   Video 3  *****- Partials -->
+
+<!--  margin he box chya baherun apply hotay and padding he box chya aatun applhy hotay -->
+
+<!-- Steps TO Follow
+1. Purn style lihili
+2. Prateyk Section chi Partial file Banvali // _name.scss
+3. Tya files import kelya partials.scss var // @use "_name" -->
+
+<!-- Variables chi partial file banavali(_constants.scss) ani pahijetya file madhe import(@use "constants";) karun use keli
+Ex constants.$primary-color  -->
+
+<!--*****   Video 4  *****- Mixin -->
+
+<!-- Mixin is used to reuse some properties like function(to reuse code). While reusing we can also change some properties if required. 
+
+SYNTAX
+@mixin name(declareVariable)
+@mixin name($value) { } // without space
+
+To include where it is required
+@include name(value)  // without space
+-->
+
+<!-- Every browser has different compatibility/supportabilty. To use browser specific features we have to use vender prefixses
+EX  transform: rotate(360deg);
+    -moz-transform: rotate(360deg); // firefox
+    -webkit-transform: rotate(360deg); // chrome and safari
+    -o-transform: rotate(360deg); // opera
+    -ms-transform: rotate(360deg); // microsoft edge -->
+
+<!-- Use of Mixin -->
+
+<!-- Before -->
+<!-- .box1 {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  transition: 2s;
+  &:hover {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+} -->
+
+<!-- After -->
+<!-- @mixin transform($value) {
+  transform: $value;
+  -moz-transform: $value;
+  -webkit-transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  transition: 2s;
+  &:hover {
+    @include transform(rotate(360deg));
+  }
+} -->
+
+<!-- NOTE
+multiple properties with same value asel tarach mixin cha use aahe. Single line of code sathi nahi -->
+
+<!-- 34:00 -->
+
+<!-- CSS madhe jar same properties astil tar aapan group selector with comma seperated vaprayacho
+Ex .succes, .error, .warning {common properties} -->
+
+<!-- Inheritance -->
+
+<!-- Inheritance cha use pan reusability of the code ch aahe like mixin.
+So, Difference is, in mixin we can pass the dynamic values we want but here in inheritance we have fix design, fix values to use. 
+
+Ex  suppose 3 elements aahet
+Mixin madhe 3 hi element madhe left hand properties same hotya ani tyanchi value hi pratyek element wise same hoti i.e(3 madhe left hand same ani right side chya values pan repetative hotya for an element). Ashya yaachyat aapan left hand cha mixin banvala aani right side dynamic thevali.
+Inheritance madhe  Aapan je CSS grouping madhe lihu shakato tech lihito. Ethe left hand same asate but right hand differnt values astat tyamule mixin nahi use karu sahakat.-->
+
+<!-- SYNTAX
+
+// class define
+%name { common properties}
+EX %message {
+  padding: 3px 10px;
+  font-weight: normal;
+  font-style: italic;
+  border-left: 1px solid #000;
+}
+
+to use
+@extend %name;  // spacing
+EX @extend %message-->
+
+<!-- NOTE -->
+<!-- Voice Message - 51/01/2023 -->
+<!-- Chronology - Install (npm i-g saas), create CSS and SCSS folder, create partials.scss file in SCSS folder, create partial of each html section and import in partials.scss, run sass scss:css --watch, link this partial file to html file style will be applied -->
+
+<!-- partials   _header.scss                    // @use "header"; -->
+<!-- mixins     @mixin transform($value){}      // @include trnsform(rotate(360))-->
+<!-- inheritance   %message{common code}        // @extend %message;-->

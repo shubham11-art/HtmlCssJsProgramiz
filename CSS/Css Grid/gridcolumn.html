@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Grid</title>
+    <style>
+      .container {
+        display: grid;
+        /* grid-template-columns: size size size; */
+        grid-template-columns: repeat(3, minmax(200px, 300px));
+        /* grid-template-columns: 300px 150px auto; */
+        /* Here 3 columns tayar honar pahilya column chi size 300px, dusryachi 150px ani 3rd column will take remaining space.  */
+        gap: 2rem;
+        /* Gets applied to every item like a margin 
+         i.e like a spacing for free*/
+        padding-top: 20px;
+      }
+      .items {
+        /* height and width comment out karun g-t-c che output check kara */
+        /* height: 100px;
+        width: 100px; */
+        background-color: rgb(54, 131, 131);
+        margin: 5px;
+        padding-top: 15px;
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- .items{Items-$}*6 -->
+      <div class="items">Item-1</div>
+      <div class="items">Item-2</div>
+      <div class="items">Item-3</div>
+      <div class="items">Item-4</div>
+      <div class="items">Item-5</div>
+      <div class="items">Item-6</div>
+      <div class="items">Item-8</div>
+      <div class="items">Item-9</div>
+    </div>
+  </body>
+</html>

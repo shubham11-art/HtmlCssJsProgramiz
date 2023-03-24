@@ -1,0 +1,39 @@
+// CSS
+
+// .success, .error, .warning, .info{
+//     padding: 3px 10px;
+//   font-weight: normal;
+//   font-style: italic;
+//   border-left: 1px solid #000;
+
+// }
+
+// ji vegali aahe ti pratyek selector madhe tashich rahnar
+
+// Inheritance
+
+// Class define
+%message {
+  padding: 3px 10px;
+  font-weight: normal;
+  font-style: italic;
+  border-left: 1px solid #000;
+}
+
+.success {
+  @extend %message;
+  background-color: green;
+}
+
+.error {
+  @extend %message;
+  background-color: rgb(0, 2, 128);
+}
+.warning {
+  @extend %message;
+  background-color: rgb(128, 0, 0);
+}
+.info {
+  @extend %message;
+  background-color: rgb(113, 128, 0);
+}

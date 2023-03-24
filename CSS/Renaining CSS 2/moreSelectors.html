@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More on Selector</title>
+    <style>
+      div li p {
+        /* if p is contained by li and li is contained by div */
+        /* div madhalya li madhlya p lach honar.
+            div madhalya li suddha nahi honar karan aapan specific address dila ahe. */
+        /* color: rgb(0, 11, 128);
+            background-color: rgb(226, 149, 149); */
+      }
+
+      div p {
+        /* any div tag ani tyachya kiti pan aat p tag asudya ha apply karnar */
+        /* color: green;
+          background-color: black; */
+      }
+
+      div > p {
+        /* div cha direct child p select honar.
+        mag jevhade div astil(normal or nested) tevhade with their direct child p select honar */
+        /* color: violet;
+        background-color: aqua; */
+      }
+
+      div + p {
+        /* p is right after closing div tag */
+        /* p chya immediate adhi div chi closing pahije */
+        color: violet;
+        background-color: aqua;
+      }
+      div ~ p {
+        /*any p after closing div pan to salag pahije. i.e like closing div cha direct child */
+        /* p chya adhi div chi closing pahije */
+        color: violet;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <p>This is a para</p>
+        <ul>
+          <li class="item">
+            <p>para inside li</p>
+          </li>
+          <li>This will not get affected</li>
+          <li><p>will apply here</p></li>
+        </ul>
+        <div>
+          <p>This is another para</p>
+        </div>
+        <p>This is outermost para</p>
+        <p>aankhi ek para</p>
+      </div>
+    </div>
+    <p>outest para</p>
+    <p>outest most para</p>
+    <div>
+      <p>last para</p>
+    </div>
+  </body>
+  <!-- Combinator Selector (If not understood tar visit w3school)-->
+  <!-- There are four different combinators in CSS:
+
+1.descendant selector (space)
+Descendant Selector
+The descendant selector matches all elements that are descendants of a specified element.
+
+The following example selects all <p> elements inside <div> elements: 
+Example
+div p {
+  background-color: yellow;
+}
+
+2.child selector (>)
+Child Selector (>)
+The child selector selects all elements that are the children of a specified element.
+
+The following example selects all <p> elements that are children of a <div> element:
+Example
+div > p {
+  background-color: yellow;
+}
+
+
+Difference between Descendant and Child is Chile ha direct khalcha element asto where descendent mhanje child chya child cha child and so on jari asel tari to pahilya parent cha descendent zala. Child is a descendent but All descendents are not child(only 1st descendent is a child).
+
+
+3.adjacent sibling selector (+)
+Adjacent Sibling Selector (+)
+The adjacent sibling selector is used to select an element that is directly after another specific element. i.e  Example chya khali bagha
+
+Sibling elements must have the same parent element, and "adjacent" means "immediately following". 
+
+The following example selects the first <p> element that are placed immediately after <div> elements:
+Example
+div + p {
+  background-color: yellow;
+}
+So, konte select hotil tar closing div tag ji ahe tyachya immediate khalacha p select hoto.
+
+
+4.general sibling selector (~)
+General Sibling Selector (~)
+The general sibling selector selects all elements that are next siblings of a specified element.
+
+The following example selects all <p> elements that are next siblings of <div> elements: 
+Example
+div ~ p {
+  background-color: yellow;
+}  
+So, Konte select honar tar closing div chya pudhe jevhade p astil tevhade sagale select honar but te p closing div che direct child pahije. adjacent sibling selector (+) madhe fakt pahila/immediate khali asnara select hoto.
+</html>

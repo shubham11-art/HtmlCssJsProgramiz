@@ -1,0 +1,21 @@
+.title {
+  background-color: cyan;
+  padding: 3px 10px;
+}
+
+.slogan {
+  background-color: cyan;
+  padding: 4px 8px;
+  color: white;
+  font-style: italic;
+}
+
+.heading {
+  background-color: cyan;
+  padding: 2px 15px;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=variable.css.map */

@@ -1,0 +1,307 @@
+/* CSS Reset  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+  --navbar-height: 50px;
+}
+
+/* Navigation Bar:   */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Bree Serif", serif;
+}
+
+/* I mostly use position :relative in the element when I know the inner element of that element is going to be positioned absolutely. 
+
+For example If I have two divs and outside div is a static block and elements inside the outer div is going to be positioned absolute relative to the outer div. Then use position:relative for the outer div and inner div should use position:absolute. Now the inner div elements can be placed anywhere using top, bottom, left and right attributes of CSS.
+
+What is happening is the absolutely positioned elements are positioning themselves in relation to the body element instead of their direct parent.
+
+parent and child ahe, jar parent chi position: relative; ahe tar child chi position: absolute;karun aapan child na tya parent madhe kuthe hi positioned karu shakato for the given top/right/bottom/left values ani jar parent chi position: relative; nasel ani child he position: absolute;asel tar ya madhe body/browser window nusar positioned hotat for the given top/right/bottom/left values.
+
+Here #navbar is a parent and #navbar::before is a child so child will be positioned according to the parent's space, irrespective of the properties of the child which may be overflowing the space of the parent(#navbar) */
+
+#navbar::before {
+  content: "";
+  /* background-color: rgba(0, 0, 0); */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Navigation Bar: Logo and Image */
+
+#logo {
+  margin: 10px 12px;
+}
+
+#logo img {
+  height: 46px;
+  margin: 4px 6px;
+}
+
+/* Navigation Bar: Lists Styling */
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1rem;
+
+  /* padding: 5px; */
+  /* Not this but khalchi padding karan khalchya padding ne area madhe jari hover kel tari effect disel to yane nahi disnar */
+}
+
+#navbar ul li a {
+  display: block;
+  /* Because byDefault inline hoti hai */
+  color: rgb(143, 2, 150);
+
+  text-decoration: none;
+  padding: 5px 13px;
+  /* color: rgb(239, 234, 229); */
+  border-radius: 10px;
+}
+.meet {
+  position: absolute;
+  float: left;
+  top: 22px;
+  right: 25px;
+}
+#navbar .meet a {
+  color: rgb(143, 2, 150);
+  list-style: none;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: "Bree Serif", serif;
+}
+#navbar .meet a:hover {
+  color: rgb(180, 24, 24);
+  background-color: rgba(169, 169, 169, 0.771);
+}
+
+#navbar ul li a:hover {
+  color: rgb(180, 24, 24);
+  background-color: rgba(169, 169, 169, 0.771);
+}
+
+/* Home Section */
+
+#home {
+  display: flex;
+  flex-direction: column;
+
+  /* position: relative; */
+  /*  #home::before chi  position: absolute; astanasudhha tyachya parent(#home) chi positio:relative; nahi thevali karan we want that img to be applied as per the browser window. */
+
+  justify-content: center;
+  align-items: center;
+  /*  justify-content: center; */
+  /* align-items: center;   */
+  /* ya doghanmule content ahe tya width la center hoil mhanun ya barobar padding vaparali karan to conten chi width kami karayachi hoti */
+  /* karan jar width ne center karayach mhanatl tar display:block and margin: x auto; vaprav lagal asat*/
+
+  padding: 5px 210px;
+  /* padding mule to content sqeeze hoil */
+
+  height: 340px;
+}
+
+#home::before {
+  content: "";
+  background: url("../images/food.jpg") no-repeat center center/cover;
+  /* background-repeat: ; */
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* .h-primary {
+  Styled with Utility Class
+  
+} */
+
+#home p {
+  color: rgb(6, 15, 108);
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Baloo 2", cursive;
+}
+
+/* .btn {
+  Styled with Utility Class
+  
+} */
+
+.btn:hover {
+  color: darkcyan;
+  background-color: aliceblue;
+}
+
+/* Services Section */
+
+#services {
+  /* margin: 1px; */
+  display: flex;
+}
+#services_container h1 {
+  margin-top: -12px;
+}
+#services .box {
+  border: 2px solid red;
+  margin: 30px;
+  padding: 16px;
+  border-radius: 23px;
+  background-color: rgba(130, 126, 120, 0.284);
+  /* width: 33%; */
+}
+#services .box img {
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+#services .box p {
+  text-align: center;
+  text-align: justify;
+  font-family: "Bree Serif", serif;
+}
+
+/* Client Section */
+#client_section {
+  position: relative;
+  height: 386px;
+  margin-top: 10px;
+  margin-bottom: -80px;
+}
+#client_section::before {
+  content: "";
+  background: url("/images/bg2..jpg") no-repeat center center/cover;
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client_item img {
+  height: 119px;
+  width: 125px;
+  display: block;
+  margin: 0 auto;
+}
+.client_item {
+  padding: 28px;
+}
+
+/* Contact Section */
+
+#contact {
+  position: relative;
+  margin-top: 16px;
+}
+#contact::before {
+  content: "";
+  background: url("/images/contact-us-customer-support.jpg") no-repeat center
+    center/cover;
+  position: absolute;
+  height: 94%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.9;
+}
+/* #contact h1 {
+  color: white;
+} */
+
+#contact_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+
+#contact_box input,
+#contact_box textarea {
+  width: 100%;
+  /* tyachya parent(form) madhe tyane 100% width ghetali ahe */
+  padding: 0.4rem;
+  font-family: "Bree Serif", serif;
+}
+
+#contact_box form {
+  width: 40%;
+  /* parent chi width control keli tyamule child chi(#contact_box input, #contact_box textarea) width aapoaap control zali */
+}
+
+#contact_box label {
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Bree Serif", serif;
+}
+footer {
+  background-color: black;
+  color: white;
+}
+/* Utility Classes ex h-primary for headings, .btn for buttons */
+
+/* For having maintainabilty of the code base/website. */
+/* Headings, paragraphs etc astil tar saglyanna same styling apply hoil ==> uniformity*/
+
+.h-primary {
+  color: rgb(6, 108, 21);
+  font-size: 2.35rem;
+  padding: 12px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+}
+
+.h-secondary {
+  font-size: 1.2rem;
+  padding: 12px;
+  font-family: "Bree Serif", serif;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgba(57, 181, 164, 0.362);
+  margin: 15px auto;
+  border-radius: 17px;
+  color: blueviolet;
+  font-size: 1.01rem;
+}
+.center {
+  text-align: center;
+}

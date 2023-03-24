@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design and Units</title>
+    <!-- Various ways to acheive Responsive design  
+    1. Setting up Viewport
+    2. Use max-width/max-height
+    3.Media Queries (to inject addtional css)
+    4.Using font units like rem/vh/vm over px-->
+
+    <style>
+        html{
+            font-size: 2rem;
+        }
+        
+      .container {
+        border: 4px solid red;
+        font-size: 10px;
+        /* width: 600px; */
+        /* margin: 20px auto; */
+        height:100vh;
+        width:50vw;
+        text-align: center;
+      }
+      h1{
+        font-size: 2em; /*applied value = 2 * 10 = 20px */
+        padding: 3em; /*applied value = 3 *2 * 10 = 60px */
+        margin: 4em; /*applied value = 4 *2 * 10 = 80px */
+        
+      }
+
+      h2{
+        font-size: 3rem;
+        padding: 2rem;
+        margin: 2.5rem;
+      }
+      
+    </style>
+  </head>
+  <body>
+   
+    <!-- UNITS -->
+    <!-- SOURCE Comprehensive Guide: When to Use em vs rem -->
+    <!-- Computed madhe value px madhe asate, aapan html madhe kontahi unit vapru like em, rem vh/vw etc -->
+
+    <!--1. em   refer(.container and h1) (1em=96px)
+      computed value = child elements size(in em) * parent elements size-->
+      <!-- aapan jya elemets la em madhe size dili tar tya element chi actual size hi given size * parent elements size asnar
+    
+    ani jar single element madhe 2 or more times em unit vaparale tar computes value of that perticular property = 2nd em unit * 1st(upper) em unit * parents size -->
+
+    <!-- USE of em
+     When we resize our parent element to usake child element bhi usake hisab se resize ho jaye-->
+
+     <!-- 2. rem   refer(html and h2) (1rem=16px)
+        computed value = child elements size(in rem) * root(i.e html) elements size --> 
+
+        <!-- here computed value em sarkha nahi tar computed value = given size(in rem) * root(html) elements size ahe -->
+
+        <!-- USE  
+        pure page main font size relative rakhani hai to hum esaka use karate hai-->
+
+        <!-- 3. vh/vw  viewportHeight/Width-->
+        <!-- viewport i.e browser chi ji window/screen aaplyala disate 
+        100vh like 100% height(mostly use hote)
+        100vw like 100% width-->
+
+    <div class="container">
+      <h1 id="first">This is First Heading</h1>
+      <h2 id="second">This is Second Heading</h1>
+      <h3 id="third">This is Third Heading</h1>
+    </div>
+  </body>
+</html>

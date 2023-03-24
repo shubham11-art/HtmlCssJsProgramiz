@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: rgba(23, 138, 142, 0.622);
+  border: 5px solid black;
+  min-height: 100vh;
+  width: 100%;
+} */
+/* OR i.e just to make it inside a container*/
+.container {
+  background-color: rgba(23, 138, 142, 0.622);
+  border: 5px solid black;
+  min-height: 100vh;
+  width: 100%;
+  /* margin: 0 auto; */
+}
+.content {
+  /* ha kashyasathi tar healthy practice ki body madhe/ eka container madhe(.container) mi ek container(.content wala) banvun tyat sarv lihito ahe  */
+  max-width: 900px;
+  margin: 0 auto;
+  /* 0 means top/bottom 0 ani auto means left/right auto honar ==> ya mule to(.content ne banvlela ) purn container/box ala centre la */
+}
+
+.top_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 75px;
+
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 450px)); */
+}
+
+/* display: grid; karun alignment aannyasathi #main_head banavala  */
+/* #main_head {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+} */
+.top_section h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+}
+
+.top_section h4 {
+  font-size: 35px;
+  text-align: end;
+}
+
+.img_container,
+img {
+  width: 250px;
+  height: 300px;
+  /* clip-path: ellipse(36% 40% at 53% 50%); */
+  border-radius: 50%;
+}
+
+.about_section {
+  margin-top: 20px;
+}
+
+.about_section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.about_section p {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1.1px;
+  text-align: justify;
+}
+
+.biography_section h4 {
+  font-size: 25px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  /* margin: 50px 0; applicable to top and bottom (50px) and left/right sathi 0px asnar */
+}
+
+.biographies_lists {
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  list-style-type: square;
+  list-style-position: inside;
+}
+/* OR */
+/* .biography_section li {
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  list-style-type: square;
+} */
+
+a {
+  text-decoration: none;
+  color: rgba(176, 123, 59, 0.656);
+}
+a:hover {
+  color: white;
+  transform: rotate(45deg);
+}
+footer {
+  margin: 30px 0;
+  text-align: end;
+}
+
+@media only screen and (max-width: 630px) {
+  .top_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top_section h4 {
+    text-align: center;
+  }
+  .about_section h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 378px) {
+  .top_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top_section h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .top_section h4 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300px;
+  }
+  .about_section h2 {
+    text-align: center;
+  }
+}

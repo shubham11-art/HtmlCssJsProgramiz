@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+      /* .container {
+      } */
+      #box {
+        /* This will be applied to 'This is box' */
+        display: flex;
+        width: 200px;
+        height: 200px;
+        background-color: bisque;
+        justify-content: center;
+        align-items: center;
+
+        transition-property: all;
+        /* transition sathi jya properties define kelya ahet tya sarv apply honyasathi all detat. */
+
+        /* transition-property: background-color; */
+        /* which change you wnat */
+
+        /* transition-duration: 2s; */
+        /* kiti vele madhe transition complete zale pahije */
+
+        /* transition-timing-function: ease-in;  */
+        /* entry slow     end la fast */
+
+        /* transition-timing-function: ease-out;  */
+        /* entry fast   end la slow */
+
+        /* transition-timing-function: ease-in-out;  */
+        /* entry fast   madhe slow    end la fast */
+
+        /* transition-delay: 2s; */
+        /* kiti vel nantar transition suru zale pahije */
+
+        /* Transition SHORT HAND Property */
+
+        /* transition: transition-property transition-duration
+          transition-timing-function transition-delay; */
+      }
+
+      #box:hover {
+        /* for transition-property: background-color; */
+        background-color: red;
+        cursor: pointer;
+      }
+
+      #box:hover {
+        /* For transition-property: all; */
+        background-color: red;
+        height: 450px;
+        width: 350px;
+        font-size: 55px;
+        border-radius: 50px;
+        border: 3px solid black;
+        cursor: pointer;
+      }
+      /* WORKING */
+
+      /*  transition-property: value(name)(here background-color ); ani defined change sathich property(name)(here #box:hover madhe background-color ) same pahije for single transition effect. i.e tya name through defined value transition la access keli jate*/
+
+      /* jar ek pekshya jast transition effect defined kele astil tar transition-property: value(name) hi all asate */
+
+      /* kaunsi properties transition ho sakati hai? 
+      JO continuous properties hai like color, font-size, opecity, margin etci.e jo yaha se vaha ja sakate hai
+      Jo binary values hai like height, width ye choti si badi hoti hui dikhegi to animation sa dikhega */
+    </style>
+  </head>
+  <body>
+    <h3>CSS Transition</h3>
+    <div class="container">
+      <div id="box">This is Box</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Spanning</title>
+    <style>
+      .spanning {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+        /* gap:size; this gap gets applied to  both rows and columns i.e pratek item chya around gap tayar hoto */
+      }
+
+      .box {
+        background-color: #ccc;
+        border: 2px solid black;
+        padding: 20px;
+      }
+      #box1 {
+        /* grid-column-start: 1; */
+        /* grid-column-end: 4; */
+        /* short cut */
+        /* grid-column: 1 / span 3; */
+        /* grid-column: 1/span 3; same as start at column number 1 and go upto column number 4 i.e 1/span 3 == start at column number 1 and it will span till 3 columns/boxes */
+
+        /* grid-row-start: 1; */
+        /* grid-row-end: 4; */
+        /* short cut */
+        /* grid-row: 1 / span 3; */
+        /* grid-row: 1/span 3; same as start at row number 1 and go upto row 4 i.e 1/span 3 == start atrow 1 and it will span till 3 rows/boxes */
+      }
+
+      #box6 {
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 2;
+
+        /* grid-column/row: X/span Y ; 
+        where X is starting number of column/row and Y means kiti columns/rows paryant span karayachay*/
+
+        /* NOTE : Only left to right spanning is available(i.e values from left end to right end). i.e we cant give values to span from right to left  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spanning">
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
+      <div class="box" id="box5">Box 5</div>
+      <div class="box" id="box6">Box 6</div>
+      <div class="box" id="box7">Box 7</div>
+      <div class="box" id="box8">Box 8</div>
+      <div class="box" id="box9">Box 9</div>
+      <div class="box" id="box10">Box 10</div>
+    </div>
+  </body>
+</html>

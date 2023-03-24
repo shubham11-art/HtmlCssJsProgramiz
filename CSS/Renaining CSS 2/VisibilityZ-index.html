@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visibility and Z-index</title>
+    <style>
+      .box {
+        width: 120px;
+        height: 120px;
+        border: 2px solid #000;
+      }
+      #box1 {
+        background-color: red;
+      }
+      #box2 {
+        /* display: none; */
+        /* visibility: hidden; */
+
+        /* difference between display: none; AND  visibility: hidden; is that 
+        display: none; hide the element and space ko bhi khali kar deta hai i.e next element usake space pe khisak jayega
+        visibility: hidden; hide the element and space ko reserve karake rakhata hai i.e only element gayab hota hai*/
+
+        background-color: rgb(136, 255, 0);
+      }
+      #box3 {
+        /* Z-index */
+
+        /* Z-index only works for positioned elements. i.e Position: absolute, relative, fixed and sticky.
+        position:static pe nahi chalega */ /* as ka hot asav karan static mhanje ti kuthech halnar nahi i.e static ahe tar mg z-index use karun kay fayada. */
+
+        /* Stacking ke samay greater the value upper the order. */
+
+        /* Ekhadya image la Z-index(negative) deun aapan tila background la neu shakato */
+
+        position: relative;
+        top: 20px;
+        /* z-index: 10; */
+        background-color: rgb(0, 34, 255);
+      }
+      #box4 {
+        position: relative;
+        z-index: 10;
+        background-color: rgb(255, 0, 204);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+  </body>
+</html>

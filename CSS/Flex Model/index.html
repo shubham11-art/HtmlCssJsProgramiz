@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Model</title>
+    <style>
+      body {
+        padding: 5px 20px 30px 5px;
+        line-height: 1.4;
+      }
+      .flex_content {
+        display: flex;
+
+        justify-content: space-around;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 600px;
+        width: 100%;
+
+        background-color: cadetblue;
+
+        /* flex-direction: column;
+        flex-direction: column-reverse;
+        flex-direction: row; */
+        /* flex-direction: row-reverse; */
+
+        /* flex-wrap: wrap; */
+        /* flex-wrap: wrap-reverse; */
+
+        flex-flow: row-reverse wrap;
+      }
+
+      .flex-item {
+        width: 80px;
+        height: 80px;
+        background-color: lightskyblue;
+        border: 1px solid black;
+        text-align: center;
+        color: rgb(240, 240, 250);
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 5px;
+      }
+
+      #flex-item-1 {
+        background-color: blueviolet;
+        /* order: 10; */
+
+        flex-basis: 150px;
+        /*  flex-basis: is used to change the default size of an item. */
+        /* When flex-direction is set to row flex-basis will control width of the item */
+        /* When flex-direction is set to column flex-basis will control height of the item */
+
+        /* align-self: ; for aligning individual item along the cross-axis and has same properties as align-items */
+      }
+
+      #flex-item-2 {
+        background-color: rgb(223, 43, 226);
+        /* order: 9; */
+
+        /* #flex-item-3 {
+        background-color: rgb(43, 226, 76);
+        /* order: 6;
+        align-self: center; */
+      }
+
+      /* #flex-item-4 {
+        background-color: rgb(226, 43, 43); */
+      /* order: 8;
+        flex-basis: 150px; */
+
+      #flex-item-5 {
+        background-color: rgb(226, 223, 43);
+      }
+      #flex-item-6 {
+        background-color: chocolate;
+        /* order: 7; */
+      }
+      #flex-item-7 {
+        background-color: brown;
+        /* order: 5; */
+      }
+      */
+    </style>
+  </head>
+
+  <body>
+    <div class="flex_content">
+      <div class="flex-item" id="flex-item-1">1</div>
+      <div class="flex-item" id="flex-item-2">2</div>
+      <div class="flex-item" id="flex-item-3">3</div>
+      <div class="flex-item" id="flex-item-4">4</div>
+      <div class="flex-item" id="flex-item-5">5</div>
+      <div class="flex-item" id="flex-item-6">6</div>
+      <div class="flex-item" id="flex-item-7">7</div>
+    </div>
+  </body>
+</html>

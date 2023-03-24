@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Template Area</title>
+    <style>
+      .container {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas:
+        /* 'navbar navbar navbar navbar' */
+          /* "head head head head" */
+          "high high high high"
+          "section section section aside"
+          "footer footer footer footer";
+        /* hya VALUE madhil content la space allote honar on webpage in the form of grid.
+        high madhil content la 4 columns cha space milele.
+        section madhil content la 3 columns cha space milele.
+        aside madhil content la 1 column cha space milele.
+        footer madhil content la 4 columns cha space milele.*/
+
+        /* grid-template-areas: ; it creates a grid with specified rows and columns (med text nusar) */
+
+        /* grid-template-areas: ; madhe med text(i.e rows and columns)  banana hota hai jisame har row main same number of columns hone chahiye. Ya madhe jevhade rows and columns thevnar tevhadya rows and columns madhe aapal webpage divide honar*/
+
+        /* grid-template-areas: ; and grid-area: ;  yanch connection mi either through ID or through CLASS karu shakato(Ex for navbar i used #navbar and .rule). AND  grid-template-areas: ; and grid-area: ;  yanchi VALUE(name) "must be same"(i.e same name) karan tya tag cha content grid- area through tya VALUE la pass hoto ani tya VALUE through  grid-template-areas: ; la to form a grid). */
+        /* VALUE(name) could be anything  */
+
+        /* "high high high high" Row 1 Column 1 2 3 4
+      "section section section aside" Row 2 Column 1 2 3 4
+          "footer footer footer footer"; Row 3 Column 1 2 3 4*/
+        /* ashya prakare grid banel ani ashya prakare to content space gheil */
+
+        /* ALSO SEE 2ND EXAMPLE */
+      }
+      .box {
+        background-color: yellow;
+        border: 3px solid black;
+      }
+
+      /* #navbar {
+        grid-area: navbar;
+      } */
+      /* OR OR OR  */
+      /* #navbar {
+        grid-area:head;
+      } */
+      /* OR OR OR  */
+      .rule {
+        grid-area: high;
+      }
+      #section {
+        grid-area: section;
+      }
+      #aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box rule" id="navbar">home about contact</div>
+      <div class="box" id="section">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        pariatur, itaque quae culpa natus aspernatur quisquam molestiae ipsam
+        nisi facere aliquam quis soluta repellendus. Fugit soluta quos aliquid
+        recusandae repudiandae eveniet doloribus dolor aperiam unde velit iusto
+        aut et eum nulla dolore similique eligendi voluptatibus beatae, ut
+        quidem vitae voluptate!
+      </div>
+      <div class="box" id="aside">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, unde
+        deleniti? Beatae deleniti laborum animi et soluta, explicabo doloremque,
+        perferendis deserunt nemo, omnis minus sunt porro voluptatibus
+        doloribus? Aliquam porro veniam minus aliquid, assumenda quam dicta
+        ipsam nemo dignissimos voluptates nulla, nobis neque obcaecati.
+        Laboriosam dolorem sed, ipsa nam, cumque illo veniam enim excepturi vero
+        sapiente incidunt deserunt reprehenderit, at aliquid qui! Explicabo
+        nulla dignissimos quas excepturi numquam, iusto hic.
+      </div>
+      <footer class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, fugit
+      </footer>
+      <!-- <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
+      <div class="box" id="box5">Box 5</div>
+      <div class="box" id="box6">Box 6</div>
+      <div class="box" id="box6">Box 7</div>
+      <div class="box" id="box6">Box 8</div>
+      <div class="box" id="box6">Box 9</div>
+      <div class="box" id="box6">Box 10</div>
+      <div class="box" id="box6">Box 11</div> -->
+    </div>
+  </body>
+</html>

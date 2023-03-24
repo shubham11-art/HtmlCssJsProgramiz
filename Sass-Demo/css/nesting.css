@@ -1,0 +1,30 @@
+.container {
+  color: red;
+}
+.container div {
+  color: blue;
+}
+.container div div {
+  color: rgb(79, 200, 200);
+}
+.container div div .heading {
+  color: black;
+}
+.container div div span {
+  color: blueviolet;
+}
+.container div div span:hover {
+  background-color: rgb(13, 14, 14);
+}
+
+.second ~ h2 {
+  color: yellow;
+}
+.second {
+  background-color: brown;
+}
+.second:hover {
+  background-color: green;
+}
+
+/*# sourceMappingURL=nesting.css.map */

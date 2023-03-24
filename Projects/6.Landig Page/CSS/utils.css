@@ -1,0 +1,80 @@
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-red {
+  font-family: "Montserrat", sans-serif;
+  background-color: red;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.font-size {
+  font-size: 30px;
+}
+.font-weight {
+  font-weight: 900;
+}
+
+.my-1 {
+  margin-top: -44px;
+  margin-bottom: 5px;
+  font-size: 61px;
+}
+
+.px-1 {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+.my-2 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  /* font-size: 61px; */
+}
+.my-3 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 10px 0;
+  /* font-size: 61px; */
+}
+
+/* .px-2 {
+  padding-left: 13px;
+  padding-right: 13px;
+} */
+
+.text-blue {
+  color: rgb(64, 64, 153);
+}
+.btn {
+  padding: 2px 12px;
+  border: 2px solid rgb(0, 0, 0);
+  color: white;
+  background-color: rgb(169, 58, 30);
+  border-radius: 7px;
+  cursor: pointer;
+}

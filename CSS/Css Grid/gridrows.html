@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Rows</title>
+    <style>
+      /*  g-t-c and g-t-r AND g-a-c and g-a-r are used to make a GRID i.e structure of rows and columns. */
+      .grid {
+        display: grid;
+        grid-template-rows: 1fr 4fr 2fr;
+        /* g-t-r same like a g-t-c(where size and number of columns banayache) here also 3 rows of given size bantat*/
+        grid-auto-rows: 3.5fr;
+        /* this we use to size the remaining rows except mentioned in g-t-r  */
+        grid-template-columns: 2fr 3fr 1fr;
+        /* i.e ethe mi rows banvalya 1fr 4fr 2fr ani bakichya 3.5fr size(i.e 3+n rows) chya. ANI columns banvale 2fr 3fr 1fr size(i.e 3 columns) che */
+
+        /* grid-auto-columns: size; */
+        /* this we use to size the remaining columns except mentioned in g-t-c  */
+        gap: 5px;
+      }
+      .box {
+        background-color: #ccc;
+        border: 2px solid red;
+      }
+      #box_1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="box" id="box_1">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+      <div class="box">Box 7</div>
+      <div class="box">Box 8</div>
+      <div class="box">Box 9</div>
+      <div class="box">Box 10</div>
+    </div>
+  </body>
+</html>

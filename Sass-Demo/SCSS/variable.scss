@@ -1,0 +1,19 @@
+$primary-color: cyan;
+
+.title {
+  background-color: $primary-color;
+  padding: 3px 10px;
+}
+.slogan {
+  background-color: $primary-color;
+  padding: 4px 8px;
+  color: white;
+  font-style: italic;
+}
+.heading {
+  background-color: $primary-color;
+  padding: 2px 15px;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  font-style: italic;
+}

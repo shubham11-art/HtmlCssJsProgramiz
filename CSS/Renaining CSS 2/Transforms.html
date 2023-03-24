@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transforms</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        display: flex;
+        background-color: antiquewhite;
+        width: 700px;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        display: flex;
+        background: brown;
+        border-radius: 2px solid #000;
+        height: 200px;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
+
+        /* 1 /* transform: rotate(45deg); */
+        /* Is tarah se direct bhi use kar sakate hai  aur niche selector kr sath bhi use kar sakate hai*/
+
+        /* Transform and Transition can be used together. Fayada kay ahe tar jar transform individual use kela tar effect khup fast yeto so for gentle effect together use kelel changal*/
+
+        /* transition: all 1s ease-in; */
+        /* i.e given transform properties will take effect in transition values defined here */
+      }
+      .box:hover {
+        /* transform: rotate(45deg); */
+        /* will rotate in 45 deg */
+
+        /* transform: skew(23deg); */
+
+        /* transform: scale(2); */
+        /* get 2 times bigger */
+
+        /* transform: translateX(100px); */
+        /* will move on X axis 
+        for negative value move on -X axis*/
+
+        /* transform: translateY(-100px); */
+        /* will move on Y ais 
+        for negative value move on -Y axis*/
+
+        /* transform: translate(X,Y); */
+        /* will move on cross axis.
+        positive and negative values are allowed */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">This is a box</div>
+    </div>
+  </body>
+</html>

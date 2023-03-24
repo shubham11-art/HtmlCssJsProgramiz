@@ -1,0 +1,46 @@
+@mixin transform($value) {
+  transform: $value;
+  -moz-transform: $value;
+  -webkit-transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  transition: 2s;
+  &:hover {
+    @include transform(rotate(360deg));
+  }
+}
+.box2 {
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 161, 62);
+  transition: 2s;
+  &:hover {
+    @include transform(scale(2));
+  }
+}
+.box3 {
+  width: 250px;
+  height: 100px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(154, 65, 136);
+  transition: 2s;
+  &:hover {
+    @include transform(translate(100px, 100px));
+  }
+}

@@ -1,0 +1,53 @@
+!<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .item1 {
+        grid-area: myArea;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas: "myArea myArea . . .";
+        /* myArea la item1 chi value pass zali. */
+        /* . . . === they are used to create columns (ethe 5 columns tayar zale ani 10 items aslyamule byDefault 2 rows tayar zalya)*/
+
+        /* SEE THE EXAMPLE ON W3School */
+        grid-gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The grid-template-areas Property</h1>
+
+    <p>
+      You can use the <em>grid-template-areas</em> property to set up a grid
+      layout.
+    </p>
+    <p>
+      Item1, is called "myArea" and will take up the place of two columns (out
+      of five):
+    </p>
+
+    <div class="grid-container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+      <div class="item7">7</div>
+      <div class="item8">8</div>
+      <div class="item9">9</div>
+    </div>
+  </body>
+</html>

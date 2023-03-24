@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Website</title>
+  </head>
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Condensed:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* CSS Reset */
+
+    /* Hi website banvtana flexBox and Grid use karayach navhat so te use n karta website banavali ahe. */
+    body {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background: url("img/dumbbles.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 1000px;
+      width: 1200px;
+      font-family: "Quicksand", sans-serif;
+    }
+    .left {
+      /* display: inline-block; */
+      /* to make them inline elements */
+      position: absolute;
+      left: 43px;
+      top: 20px;
+      /* font-size: 17px;
+        padding: 15px; */
+      /* float: left; */
+
+      /* border: 2px solid red; */
+    }
+    .navigation {
+      /* to center an element/item/box 3 conditions display: block;  margin: 12px auto; width: 33%;*/
+      display: block;
+      margin: 20px auto;
+      width: 37%;
+      /* 3 boxes so width 33% */
+      /* border: 2px solid green; */
+    }
+    .right {
+      display: inline-block;
+      position: absolute;
+      /* to fix to the right */
+      right: 35px;
+      top: 11px;
+      /* border: 2px solid black; */
+
+      /* float: right; */
+    }
+
+    .left img {
+      width: 50px;
+      padding-left: 30px;
+      /* filter: invert(100%); */
+      /* this will make black to white and vice-versa */
+    }
+
+    .left div {
+      text-align: center;
+      line-height: 15px;
+    }
+    .navbar ul {
+      padding-left: 29px;
+      margin: 14px 0px;
+    }
+    .navbar li {
+      display: inline;
+      font-size: 17px;
+    }
+
+    .navbar li a {
+      text-decoration: none;
+      padding: 15px;
+    }
+    .navbar li a  .navbar li a.active{
+      text-decoration: underline;
+    color: brown;
+    }
+    .navbar li a:hover {
+      text-decoration: underline;
+      color: rgb(154, 51, 51);
+    }
+
+    .btn {
+      margin: 10px;
+      border-radius: 8px;
+      border-color: cornflowerblue;
+      font-size: 13px;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .btn:hover {
+      background-color: blueviolet;
+      color: white;
+      cursor: pointer;
+      border-color: rgb(100, 237, 132);
+    }
+
+    .second_container {
+      /* border: 2px solid rgb(174, 0, 255); */
+      margin: 32px 38px;
+      padding: 20px;
+      width: 33%;
+     
+    }
+
+    .second_container h2 {
+      text-align: center;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .form_control input {
+      /* border: 2px soild red; */
+      border-radius: 8px;
+      text-align: center;
+      font-size: 15px;
+      display: block;
+      width: 60%;
+      margin: 8px auto;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .form_control input:hover {
+      outline-color: rgb(117, 50, 140);
+    }
+
+    .form_btn {
+      display: block;
+      width: 30%;
+      margin: 8px auto;
+      border-radius: 8px;
+      text-align: center;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .form_btn:hover {
+      background-color: rgb(117, 50, 140);
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <header class="header">
+      <!-- Left box for Logo -->
+      <div class="left">
+        <img src="./img/logo.png" alt="" />
+        <div>Harry's Fitness</div>
+      </div>
+
+      <!-- Mid box for navbar -->
+      <div class="navigation">
+        <div class="navbar">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Trainer</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right box for search -->
+      <div class="right">
+        <button class="btn">Call Us</button
+        ><button class="btn">Email Us</button>
+      </div>
+    </header>
+    <div class="second_container">
+      <h2>Join the Best Gym of Delhi Now</h2>
+      <form action="noaction.php">
+        <div class="form_control">
+          <input
+            type="text"
+            name="first_name"
+            id=""
+            placeholder="Enter First name"
+          />
+        </div>
+        <div class="form_control">
+          <input
+            type="text"
+            name="Last_name"
+            id=""
+            placeholder="Enter Last name"
+          />
+        <div class="form_control">
+          <input
+            type="text"
+            name="gender"
+            id=""
+            placeholder="Enter Gender"
+          />
+          <div class="form_control">
+          <input type="number" name="first_name" id="" placeholder="Your age" />
+        </div>
+        <div class="form_control">
+          <input
+            type="number"
+            name="phone_number"
+            id=""
+            placeholder="Enter Phone NUmber"
+          />
+        </div>
+        <div class="form_control">
+          <input
+            type="email"
+            name="email"
+            id=""
+            placeholder="Enter Email"
+          />
+        </div>
+        
+        <button class="form_btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

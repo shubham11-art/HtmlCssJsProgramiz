@@ -1,0 +1,103 @@
+/* CSS Reset  */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Bree+Serif&family=Montserrat:ital,wght@1,300&family=Quicksand&family=Roboto+Condensed:wght@300&display=swap");
+* {
+  /* m-0:   p-0:  */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* Middling the container */
+  max-width: 80vw;
+}
+
+header nav {
+  height: 72px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  list-style: none;
+  font-size: 13px;
+}
+
+.navbar li {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* .top-section {
+  height: 50vh;
+} */
+
+.top-left {
+  width: 50%;
+  padding-top: 12px;
+}
+.top-right {
+  width: 50%;
+  /* padding-top: 12px; */
+}
+.dumbbleImg {
+  height: 300px;
+  width: 434px;
+}
+
+.dumble-img {
+  text-align: center;
+}
+.top-section h1 {
+  color: rgb(197, 114, 31);
+}
+
+.mainImg {
+  /* height: 152px;
+  width: 229px; */
+  height: 1182px;
+  width: 730px;
+  /* height: 152px;
+  width: 229px; */
+  padding-top: 12px;
+}
+
+.pricing {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.middle-para {
+  width: 55vw;
+  margin: 0 auto;
+}
+
+.box {
+  margin: 12px;
+  border: 2px solid rgb(211, 68, 33);
+  border-radius: 8px;
+}
+.bg-gray {
+  display: block;
+  background-color: rgba(151, 145, 145, 0.336);
+  width: 100%;
+}
+
+.middle-boxes ul li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.box1 ul li {
+  margin: 5px;
+  padding: 2px;
+  width: 24vw;
+  list-style-type: none;
+}
+
+footer {
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}

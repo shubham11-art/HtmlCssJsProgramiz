@@ -1,0 +1,36 @@
+/* CSS Calc Function */
+
+.calc {
+  height: calc(10px + 90px);
+  width: 100px;
+
+  background-color: red;
+}
+
+/* Syntax
+calc(10px + 20px); 
+calc ani () madhe space nako.
+operator chya bajula space hawa*/
+
+/* calc(100px + / - / *  / / 100px); */
+
+/* Can combine different units */
+/* calc(100% - 30px); => purn width except 30px. With this we can add margin to objects w/o using margin*/
+
+/* calc chya aatmadhe calc vapru shakato.
+calc(100px +  calc(20px + 30px)); */
+
+/* calc chya aatmadhe css variable vapru shakato.
+calc(var(--width) * 2); 
+Ekada value define karaychi ani calc chya madatine pahije tashi modify karayachi*/
+
+/* Note about the CSS calc() function:
+
+It does not work when applied to media queries
+The HTML parser generates an error when you divide by zero
+It is possible to nest the calc() function */
+
+/* When to Use 
+When working with CSS variables.
+Need to do repetative work.
+When using different units.  */

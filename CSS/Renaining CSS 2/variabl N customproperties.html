@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+      /* CSS dont through errors. kuch na kuch to use show karana hi hai. so isase hum dikkat main bhi pad sakate hai */
+
+      :root {
+        /* Ethe jar variables define kele tar te like global scope var ahet so aapan tyanna purn code madhe kuthehi access karu shakato */
+
+        /* --primary-color: blue;*/
+        /* --danger-color: red;  */
+        /* --maxw: 333px; */
+      }
+      .container {
+        max-width: var(--maxw);
+        display: flex;
+
+        /* --box-color: green; */
+        /* ha same variable(mhanje same name cha) ethe nahi use honar karan Tyacha SCOPE ha .box{} purtach maryadit ahe */
+      }
+
+      .box {
+        height: 200px;
+        width: 200px;
+        margin: 5px;
+
+        /* Creation of variable in CSS */
+
+        /* --box-color: green; */
+        /* this is how variable is created */
+        /* to use it we write
+        var(--box-color)  === green*/
+
+        /* i.e jithe kuthe green color use karayachay tiyhe mi  var(--box-color) use karu shakato */
+
+        --boxcolor: blue;
+        /* background-color: var(--boxcolor); */
+        /* background-color: blue; */
+        /* both are same */
+
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+  </body>
+</html>

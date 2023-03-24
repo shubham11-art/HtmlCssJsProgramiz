@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alignment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- KEEP IN MIND
+float: ; and clear: ; and  width: ; he COMBINATIONS vaprun aapan layouting karu shakato -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+      .container {
+        width: 900px;
+        border: 2px solid purple;
+        margin: 10px auto;
+      }
+      .item {
+        border: 3px solid #000;
+        margin: 12px 5px;
+        padding: 10px;
+      }
+      #fruits {
+        float: left;
+        width: 45%;
+        /* how the element is taking width in the container tar (height: ; to ghetach nahiye) left to right span ghetoy
+        Ex width: 10% 20% 30 % theun bagha it acts as height*/
+      }
+      #computer {
+        /* float: right;
+        width:48%; */
+        /* OR OR OR */
+        /* float: right;
+        width: 55%; */
+        /* OR OR OR */
+        /* float: left;
+        width: 55%; */
+        /* OR OR OR */
+        float: left;
+        width: 45%;
+        /* try out the combinations and i found out that #fruits wala dabba acts like a inline element i.e if #computer wala dabba finds space tar to #fruits walya shejari aligh hotoy.
+        Varache sagale combinations clear: ; barobar vaparale tar alignment change hote ahe */
+
+        /* clear: left;
+    clear: right;
+    clear: both; */
+      }
+      /* jyachyavar overlapping zali ahe tithe clear: ; property cha use karayacha. Jyachi overlapping ahe tya var nahi */
+
+      #stationary {
+        /* clear: left; means dusra item jo float: left; property mule float kartoy tyala clear karnar(i.e if float;left; ne flaot kartoy tar clear: right; ne clear honar nahi)  */
+
+        /* clear: right; means dusra item jo float: right; property mule float kartoy tyala clear karnar(i.e if float;right; ne flaot kartoy tar clear:left; ne clear honar nahi)  */
+
+        /* clear: both;  means kuthalahi prakarcha floated element jo mazya left or right  var asel clear it*/
+        /* float: left; */
+        clear: both;
+        width: 100%;
+      }
+      h1 {
+        /* text-align: center; */
+
+        /*   OR  OR  OR */
+
+        margin: 10px auto;
+        width: 445px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to My Store</h1>
+      <div id="fruits" class="item">
+        <h3>Fruits</h3>
+        <p id="fruitspara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+          nulla impedit quis vitae nihil eum, obcaecati ad itaque necessitatibus
+          ab dolores iusto quasi ipsum nisi sunt reiciendis voluptates porro?
+          Eos.
+        </p>
+      </div>
+      <div id="computer" class="item">
+        <h3>Computer</h3>
+        <p id="computerpara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+          nulla impedit quis vitae nihil eum, obcaecati ad itaque necessitatibus
+          ab dolores iusto quasi ipsum nisi sunt reiciendis voluptates porro?
+          Eos.
+        </p>
+      </div>
+      <div id="stationary" class="item">
+        <h3>Stationary</h3>
+        <p id="stationarypara" class="para">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+          nulla impedit quis vitae nihil eum, obcaecati ad itaque necessitatibus
+          ab dolores iusto quasi ipsum nisi sunt reiciendis voluptates porro?
+          Eos.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
